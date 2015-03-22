@@ -48,26 +48,12 @@ names(extractedData)<-gsub("-freq()", "Frequency", names(extractedData), ignore.
 names(extractedData)<-gsub("angle", "Angle", names(extractedData))
 names(extractedData)<-gsub("gravity", "Gravity", names(extractedData))
 extractedData$Activity <- as.factor(extractedData$Activity)
-
-8) appropriately labels the data set with descriptive variable names and factorize subject
-names(extractedData)<-gsub("Acc", "Accelerometer", names(extractedData))
-names(extractedData)<-gsub("Gyro", "Gyroscope", names(extractedData))
-names(extractedData)<-gsub("BodyBody", "Body", names(extractedData))
-names(extractedData)<-gsub("Mag", "Magnitude", names(extractedData))
-names(extractedData)<-gsub("^t", "Time", names(extractedData))
-names(extractedData)<-gsub("^f", "Frequency", names(extractedData))
-names(extractedData)<-gsub("tBody", "TimeBody", names(extractedData))
-names(extractedData)<-gsub("-mean()", "Mean", names(extractedData), ignore.case = TRUE)
-names(extractedData)<-gsub("-std()", "STD", names(extractedData), ignore.case = TRUE)
-names(extractedData)<-gsub("-freq()", "Frequency", names(extractedData), ignore.case = TRUE)
-names(extractedData)<-gsub("angle", "Angle", names(extractedData))
-names(extractedData)<-gsub("gravity", "Gravity", names(extractedData))
 extractedData$Subject <- as.factor(extractedData$Subject)
 
-9) create a second, independent tidy data set with the average of each variable for each activity and each subject
+8) create a second, independent tidy data set with the average of each variable for each activity and each subject
 
-9.1) update extracteData table
+8.1) update extracteData table
 
-9.2) create tidy data set as tidyData (aggregate and order by Subject and Activity and remove NAs)
+8.2) create tidy data set as tidyData (aggregate and order by Subject and Activity and remove NAs)
 
-9.3) write tidy data as new "tidyData.txt" file
+8.3) write tidy data as new "tidyData.txt" file
